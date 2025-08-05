@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiries & Appointments - Élégance Noir</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Marquee -->
+    <div class="marquee-container">
+        <div class="marquee">
+            <span>🌟 Spring Collection 2025 Launch - March 15th | Fashion Week Paris - April 2-8 | Exclusive VIP Preview - March 10th 🌟</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Élégance Noir</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Collections</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="board.html" class="nav-link">Board of Trustees</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="contact.html" class="nav-link active">Inquiries</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Inquiries & Appointments</h1>
+            <p>Get in touch with our team for personalized service</p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="contact-options">
+        <div class="container">
+            <div class="options-grid">
+                <div class="option-card" data-aos="fade-up">
+                    <div class="option-icon">📞</div>
+                    <h3>Phone Consultation</h3>
+                    <p>Speak directly with our fashion consultants</p>
+                    <p class="option-detail">+234 812 898 989 89</p>
+                    <p class="option-hours">Mon-Sat: 9:00 AM - 7:00 PM</p>
+                </div>
+                <div class="option-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="option-icon">📧</div>
+                    <h3>Email Inquiry</h3>
+                    <p>Send us your questions and requests</p>
+                    <p class="option-detail">info@elegancenoir.com</p>
+                    <p class="option-hours">Response within 24 hours</p>
+                </div>
+                <div class="option-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="option-icon">🏪</div>
+                    <h3>Visit Our Boutique</h3>
+                    <p>Experience our collections in person</p>
+                    <p class="option-detail">24, Lagos Silicon Valley, Yaba, Lagos</p>
+                    <p class="option-hours">Mon-Sat: 10:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Forms -->
+    <section class="contact-forms">
+        <div class="container">
+            <div class="forms-grid">
+                <!-- General Inquiry Form -->
+                <div class="form-section">
+                    <h2>General Inquiry</h2>
+                    <form class="contact-form" onsubmit="submitInquiry(event)">
+                        <div class="form-group">
+                            <label for="inquiry-name">Full Name *</label>
+                            <input type="text" id="inquiry-name" name="name" placeholder="Isabella Munroe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiry-email">Email Address *</label>
+                            <input type="email" id="inquiry-email" name="email" placeholder="isabella@mymail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiry-phone">Phone Number</label>
+                            <input type="tel" id="inquiry-phone" name="phone" placeholder="+234 XXX XXX XXXX" />
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiry-subject">Subject *</label>
+                            <select id="inquiry-subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="product-info">Product Information</option>
+                                <option value="custom-order">Custom Order</option>
+                                <option value="sizing">Sizing Assistance</option>
+                                <option value="returns">Returns & Exchanges</option>
+                                <option value="press">Press Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiry-message">Message *</label>
+                            <textarea id="inquiry-message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Send Inquiry</button>
+                    </form>
+                </div>
+
+                <!-- Appointment Booking Form -->
+                <div class="form-section">
+                    <h2>Book an Appointment</h2>
+                    <form class="contact-form" onsubmit="bookAppointment(event)">
+                        <div class="form-group">
+                            <label for="appointment-name">Full Name *</label>
+                            <input type="text" id="appointment-name" name="name" placeholder="Isabella Munroe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointment-email">Email Address *</label>
+                            <input type="email" id="appointment-email" name="email" placeholder="isabella@mymail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointment-phone">Phone Number *</label>
+                            <input type="tel" id="appointment-phone" name="phone" placeholder="+234 XXX XXX XXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointment-service">Service Type *</label>
+                            <select id="appointment-service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="personal-styling">Personal Styling Session</option>
+                                <option value="custom-fitting">Custom Fitting</option>
+                                <option value="wardrobe-consultation">Wardrobe Consultation</option>
+                                <option value="bridal-consultation">Bridal Consultation</option>
+                                <option value="vip-shopping">VIP Shopping Experience</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="appointment-date">Preferred Date *</label>
+                                <input type="date" id="appointment-date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="appointment-time">Preferred Time *</label>
+                                <select id="appointment-time" name="time" required>
+                                    <option value="">Select time</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointment-notes">Special Requests</label>
+                            <textarea id="appointment-notes" name="notes" rows="3" placeholder="Any specific requirements or preferences..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="location-map">
+        <div class="container">
+            <h2 class="section-title">Visit Our Flagship Store</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <img src="/map/map.png" alt="Store Location Map">
+                    <div class="map-overlay">
+                        <div class="location-info">
+                            <h3>Élégance Noir Flagship Store</h3>
+                            <p>📍 24, Lagos Silicon Valley, Yaba, Lagos</p>
+                            <p>🚇 Metro: Châtelet-Les Halles (Lines 1, 4, 7, 11, 14)</p>
+                            <p>🚗 Parking available at nearby Châtelet-Les Halles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Hours -->
+    <section class="store-hours">
+        <div class="container">
+            <div class="hours-content">
+                <h2>Store Hours</h2>
+                <div class="hours-grid">
+                    <div class="hours-item">
+                        <span class="day">Monday - Friday</span>
+                        <span class="time">10:00 AM - 8:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Saturday</span>
+                        <span class="time">10:00 AM - 9:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Sunday</span>
+                        <span class="time">12:00 PM - 6:00 PM</span>
+                    </div>
+                </div>
+                <p class="hours-note">*Holiday hours may vary. Please call ahead to confirm.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Élégance Noir</h3>
+                    <p>Luxury fashion house dedicated to creating timeless pieces that embody sophistication and elegance.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Collections</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 24, Lagos Silicon Valley, Yaba, Lagos</p>
+                    <p>📞 +234 812 898 989 89</p>
+                    <p>✉️ info@elegancenoir.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Élégance Noir. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
